@@ -1,0 +1,36 @@
+/* ============================================================
+   Page Builder CSS — loaded ONLY in the builder preview iframe
+   and the builder editor. NOT loaded on live public pages.
+   All spacing on live pages comes exclusively from inline
+   styles set by the renderer. No class carries margin/padding.
+   ============================================================ */
+
+/* Reset inside preview */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; color: #1a1a1a; }
+
+/* Builder control overlay classes — builder mode only */
+.pb-section { display: block; }
+.pb-row { display: block; }
+.pb-col { display: block; }
+
+/* Rich text prose inside modules */
+.pb-prose { line-height: 1.8; }
+.pb-prose h1, .pb-prose h2, .pb-prose h3, .pb-prose h4 { margin-bottom: 0.6rem; line-height: 1.25; }
+.pb-prose p { margin-bottom: 1rem; }
+.pb-prose p:last-child { margin-bottom: 0; }
+.pb-prose ul, .pb-prose ol { margin-left: 1.5rem; margin-bottom: 1rem; }
+.pb-prose li { margin-bottom: 0.25rem; }
+.pb-prose blockquote { border-left: 4px solid var(--primary, #AA0101); padding-left: 1rem; opacity: .75; margin: 1rem 0; }
+.pb-prose a { color: var(--primary, #AA0101); }
+.pb-prose img { max-width: 100%; height: auto; border-radius: 6px; }
+
+/* Divider */
+.pb-divider { border: none; border-top: 1px solid var(--grey-mid, #D1D5DB); }
+.pb-divider--dashed { border-top-style: dashed; border-top-width: 2px; }
+.pb-divider--dotted { border-top-style: dotted; border-top-width: 2px; }
+
+/* Responsive columns */
+@media (max-width: 768px) {
+    .pb-row-inner { flex-direction: column !important; }
+}
